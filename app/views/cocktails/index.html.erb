@@ -1,12 +1,33 @@
 <div class="container">
-  <h1>
-    Cocktails
-  </h1>
-    <%@cocktails.each do |cocktail|%>
-    <p>
-      <%= link_to cocktail.name, cocktail_path(cocktail)%>
-    </p>
-  <% end %>
-
-  <%= link_to "Add a new cocktail", "cocktails/new" %>
+  <div class="index">
+    <div class="gradient">
+      <div class="title">
+        <h1>
+          COCKT
+        </h1>
+        <h1>
+          AIL
+        </h1>
+      </div>
+    </div>
+    <div class="cocktail-list">
+      <%@cocktails.each do |cocktail|%>
+        <p>
+          <i class="fas fa-heart" id="heart"></i>
+          <%= link_to cocktail.name, cocktail_path(cocktail), :class => "link"%>
+        </p>
+        
+      <% end %>
+          <%= link_to "Add a new cocktail", new_cocktail_url, :class => "btn" %>
+    </div>
+  </div>
 </div>
+
+          <svg>
+  <defs>
+    <filter id="flyOn">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="4" result="noise" seed="3"/>
+  <feDisplacementMap in="SourceGraphic" in2="noise" scale="15" />
+    </filter>
+  </defs>
+</svg>

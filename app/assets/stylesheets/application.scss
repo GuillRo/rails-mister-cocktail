@@ -13,3 +13,120 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+body {
+  // background-color: rgba(255, 255, 45, 0.938);
+  background-image: linear-gradient(rgba(236, 101, 124, 0.836), rgb(243, 220, 220));
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+// .gradient{
+//   background-image: linear-gradient(rgba(236, 101, 124, 0.836), rgb(243, 220, 220));
+// }
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  // background-image: asset-url('alcoholic-beverage-beverage-cocktail-970197.jpg');
+  // // background-position: 0px -550px; 
+  // background-position: -475px -150px; 
+  // background-size: cover;
+}
+
+.title {
+
+  padding: 20px 0 0 0;
+  font-size: 300px;
+  font-weight: bolder;
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: asset-url('alcoholic-beverage-beverage-cocktail-970197.jpg');
+  background-size: cover;
+  background-position: -460px -180px; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 100%;
+  h1 {
+    font-size: 500px;
+    font-weight: 900;
+    line-height: 60%;
+  }
+}
+
+@keyframes example {
+  0% {background-color: rgba(0, 206, 199, 0.25);}
+  50% {background-color: rgba(0, 206, 199, 0.5);}
+  100% {background-color: rgba(0, 206, 199, 0.25);}
+}
+
+@keyframes hearty {
+  0% {background-color:#ED7D90;}
+  50% {background-color: rgba(236, 42, 74, 0.7);}
+  100% {background-color: #ED7D90;}
+}
+
+.link{
+  // font-size: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+.link:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.btn {
+  letter-spacing: -5px;
+  font-family: 'VT323', monospace;
+  font-size: 70px;
+  border: 3px dotted white; 
+  height: 250px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cocktail-list {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 50px;
+  position: relative;
+  // border-style: 
+  height: 255px;
+  width: 70%;
+  top: -270px;
+  left: 42%;
+  // background-color: rgba(255, 255, 255, 0.26);
+  width: 795px;
+  p {
+    // position: absolute;
+    letter-spacing: -5px;
+    font-family: 'VT323', monospace;
+    font-size: 70px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+  }
+}
+
+.cocktail-list p:hover{
+  filter: url("#flyOn");
+}
+
+#heart {
+  letter-spacing: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: hearty;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
